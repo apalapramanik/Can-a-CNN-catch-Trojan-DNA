@@ -1,0 +1,11 @@
+# Second environment: runs the authors' unmodified Keras CNN script (src/ap_step9_authors_cnn.py).
+# Tested with Python 3.12, tensorflow 2.21, keras 3.15, numpy 2.5, scikit-learn 1.9.
+# The authors' script was written for Keras 2.3. ap_step9_authors_cnn.py applies four small
+# compatibility rewrites in memory and never edits the authors' file.
+numpy>=1.26
+scikit-learn>=1.4
+tensorflow>=2.16
+
+# Third environment (legacy, Python 3.8): runs the authors' unmodified alignment code
+# (src/ap_step9_test_authors_maxnw.py). Our environment had numpy 1.19.5, Cython 3.0.11 and nwalign3 0.1.2
+# built from its source distribution. We did not re-test a clean install from PyPI.

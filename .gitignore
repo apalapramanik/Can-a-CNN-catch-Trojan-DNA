@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------
+# Claude Code and other assistant files
+# ---------------------------------------------------------------
+.claude/
+.claude*
+CLAUDE.md
+CLAUDE.local.md
+CLAUDE*.md
+.claudeignore
+.mcp.json
+.mcp*.json
+# working notes written during the sessions
+docs/notes/
+
+# ---------------------------------------------------------------
+# Large or regenerable files
+# ---------------------------------------------------------------
+# generated datasets (about 845 MB); recreate with src/ap_step4d_generate_datasets.py
+data/datasets/
+# trained weights; recreate with scripts/run_all_detectors.sh
+models/
+# clone of the authors' repository; see README
+authors_repo/
+
+# ---------------------------------------------------------------
+# Logs and local drafts
+# ---------------------------------------------------------------
+results/logs/
+results/**/logs/
+*.tfevents*
+*.log
+paper/drafts/
+figures/archive/
+
+# ---------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------------------------------------------------------------
+# OS, OneDrive and Office files
+# ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+~$*
+*.tmp

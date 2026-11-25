@@ -1,0 +1,158 @@
+{
+  "_note": "Single source of truth for dataset facts and paths. Paths are relative to trojan_reimplementation/. Stats were measured by ap_step2_explore_data.py.",
+  "paths": {
+    "authors_repo": "authors_repo",
+    "raw_plasmid_dna": "authors_repo/addgene_data_collection/all_plasmid_dna.txt",
+    "plasmid_ids": "authors_repo/addgene_data_collection/plasmid_ids.txt",
+    "authors_attack_code": "authors_repo/trojan_attack",
+    "my_code": "src",
+    "matrices": "matrices",
+    "figures": "figures",
+    "results": "results",
+    "datasets": "data/datasets"
+  },
+  "raw_file_format": {
+    "example_line": "1, 107251,\"> Addgene NGS Result\",CCCCTCTCC...",
+    "dna_split_on": "\",",
+    "note": "DNA is the text after the first '\",' on each line"
+  },
+  "dataset_stats": {
+    "num_addgene_ids": 716,
+    "num_sequences": 1774,
+    "length_min": 45,
+    "length_mean": 3097,
+    "length_max": 14877,
+    "total_letters": 5493350,
+    "base_percent": {
+      "A": 25.51,
+      "G": 25.03,
+      "T": 24.84,
+      "C": 24.59
+    },
+    "n_count": 1173,
+    "other_stray_chars": [
+      "S",
+      "R",
+      "K",
+      "M",
+      "W",
+      "Y",
+      "V",
+      "?",
+      "0",
+      "="
+    ]
+  },
+  "reads": {
+    "read_size": 1000,
+    "cut_method": "non-overlapping chunks of read_size from each sequence",
+    "allowed_letters": "ACGTN",
+    "num_usable_reads": 4356,
+    "matches_paper": true
+  },
+  "authors_experiment_design": {
+    "datasets": 10,
+    "clean_reads_per_dataset": 1000,
+    "malicious_reads_per_dataset": 1000,
+    "pooled_clean": 10000,
+    "pooled_malicious": 10000,
+    "train_fraction": 0.75,
+    "payload_style": "firstname.lastname:port, name <= 10 chars, port 1-9999 (fake addresses)",
+    "best_cnn": {
+      "hidden_layers": 1,
+      "filters": 16,
+      "kernel": 16,
+      "maxpool": 4
+    },
+    "training": {
+      "epochs": 3000,
+      "batch_size": 100,
+      "learning_rate": 0.001,
+      "validation_fraction": 0.1
+    }
+  },
+  "steganography_defaults_from_paper": {
+    "encoding": {
+      "00": "A",
+      "01": "C",
+      "10": "G",
+      "11": "T"
+    },
+    "fragment_sizes_tested": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "retention_values_tested": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "encryption_keys_tested": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "min_tag_length": 5,
+    "max_fragments": 16
+  },
+  "authors_real_experiment_settings": {
+    "_source": "authors_repo/trojan_attack/generate_dataset_new.py main() and seed_data_generator.py (found step 4c)",
+    "start_tag": "TCATG",
+    "end_tag": "GTTGG",
+    "payload_generator": "domain=1-2 random lowercase letters, tld=2 random letters, port=1..99, then make_shorter_payloads -> 'domain<port>tld' (e.g. xy42ab)",
+    "hosts": "first 1000 reads of the plasmid file, reshuffled for each dataset; payload k is paired with the k-th shuffled host",
+    "num_datasets": 10,
+    "hosts_per_dataset": 1000,
+    "fragment_lengths": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "retention_numbers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "encryption_keys": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "scoring_matrix_in_code": "PAM250 (but PAM10 reproduces paper Fig. 5b when tags/payloads are the real ones)"
+  },
+  "generated_datasets": {
+    "layout": "data/datasets/fragment_len_F/retention_pos_R/encryption_key_K/dataset_D/ (authors' layout)",
+    "files": [
+      "non_trojan_dataset.txt",
+      "random_trojan_insertion_dataset.txt",
+      "nw_best_greedy_trojan_insertion_dataset.txt",
+      "nw_worst_greedy_trojan_insertion_dataset.txt",
+      "payloads.txt",
+      "decodes.csv"
+    ],
+    "settings_generated": "25: size1-5 @ret0/key0; size1,5 @ret1-5/key0; size1 @ret0,1 x keys10-50. 10 datasets each (250 datasets, ~966 MB)",
+    "matrix": "PAM10",
+    "tags": [
+      "TCATG",
+      "GTTGG"
+    ],
+    "label": "all injected reads are malicious (authors' labelling)",
+    "smart_decoder_recovery": "96.9% of 750000 injected reads (100% at retention 0); naive tag scan only ~37-74%"
+  }
+}

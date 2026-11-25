@@ -1,0 +1,6 @@
+# Main environment: attack simulation, k-mer baseline, PyTorch detectors, all figures.
+# Tested with Python 3.13, torch 2.15, numpy 2.5, scikit-learn 1.9, matplotlib 3.11.
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+torch>=2.2

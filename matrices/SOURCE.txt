@@ -1,0 +1,1 @@
+PAM10, PAM30 downloaded 2026-10-29 from https://ftp.ncbi.nlm.nih.gov/blast/matrices/ (NCBI). Authors' PAM250 is in authors_repo/trojan_attack/PAM250.

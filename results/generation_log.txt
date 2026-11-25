@@ -1,0 +1,26 @@
+fragment 1, retention 0, key 0: payload recovered (naive scan | smart)  random: 36% | 100%  best: 44% | 100%  worst: 36% | 100%
+fragment 2, retention 0, key 0: payload recovered (naive scan | smart)  random: 38% | 100%  best: 45% | 100%  worst: 38% | 100%
+fragment 3, retention 0, key 0: payload recovered (naive scan | smart)  random: 39% | 100%  best: 44% | 100%  worst: 41% | 100%
+fragment 4, retention 0, key 0: payload recovered (naive scan | smart)  random: 39% | 100%  best: 45% | 100%  worst: 40% | 100%
+fragment 5, retention 0, key 0: payload recovered (naive scan | smart)  random: 43% | 100%  best: 45% | 100%  worst: 42% | 100%
+fragment 1, retention 1, key 0: payload recovered (naive scan | smart)  random: 63% | 97%  best: 68% | 98%  worst: 69% | 97%
+fragment 1, retention 2, key 0: payload recovered (naive scan | smart)  random: 52% | 94%  best: 60% | 90%  worst: 56% | 94%
+fragment 1, retention 3, key 0: payload recovered (naive scan | smart)  random: 45% | 90%  best: 56% | 92%  worst: 49% | 92%
+fragment 1, retention 4, key 0: payload recovered (naive scan | smart)  random: 59% | 92%  best: 67% | 95%  worst: 63% | 91%
+fragment 1, retention 5, key 0: payload recovered (naive scan | smart)  random: 65% | 91%  best: 71% | 90%  worst: 66% | 90%
+fragment 5, retention 1, key 0: payload recovered (naive scan | smart)  random: 73% | 98%  best: 75% | 99%  worst: 74% | 98%
+fragment 5, retention 2, key 0: payload recovered (naive scan | smart)  random: 60% | 95%  best: 62% | 95%  worst: 61% | 96%
+fragment 5, retention 3, key 0: payload recovered (naive scan | smart)  random: 53% | 92%  best: 56% | 94%  worst: 53% | 94%
+fragment 5, retention 4, key 0: payload recovered (naive scan | smart)  random: 63% | 94%  best: 67% | 95%  worst: 64% | 92%
+fragment 5, retention 5, key 0: payload recovered (naive scan | smart)  random: 65% | 93%  best: 68% | 93%  worst: 67% | 93%
+fragment 1, retention 0, key 10: payload recovered (naive scan | smart)  random: 33% | 100%  best: 45% | 100%  worst: 35% | 100%
+fragment 1, retention 0, key 20: payload recovered (naive scan | smart)  random: 34% | 100%  best: 42% | 100%  worst: 37% | 100%
+fragment 1, retention 0, key 30: payload recovered (naive scan | smart)  random: 34% | 100%  best: 44% | 100%  worst: 35% | 100%
+fragment 1, retention 0, key 40: payload recovered (naive scan | smart)  random: 34% | 100%  best: 46% | 100%  worst: 36% | 100%
+fragment 1, retention 0, key 50: payload recovered (naive scan | smart)  random: 36% | 100%  best: 44% | 100%  worst: 36% | 100%
+fragment 1, retention 1, key 10: payload recovered (naive scan | smart)  random: 63% | 97%  best: 69% | 97%  worst: 69% | 98%
+fragment 1, retention 1, key 20: payload recovered (naive scan | smart)  random: 64% | 97%  best: 70% | 98%  worst: 68% | 97%
+fragment 1, retention 1, key 30: payload recovered (naive scan | smart)  random: 62% | 97%  best: 68% | 97%  worst: 67% | 97%
+fragment 1, retention 1, key 40: payload recovered (naive scan | smart)  random: 63% | 97%  best: 68% | 95%  worst: 67% | 97%
+fragment 1, retention 1, key 50: payload recovered (naive scan | smart)  random: 64% | 97%  best: 67% | 97%  worst: 68% | 97%
+ALL_DONE
