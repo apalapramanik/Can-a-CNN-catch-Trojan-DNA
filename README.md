@@ -174,7 +174,3 @@ On an Apple GPU, one detector run took from about 10 minutes to over an hour, de
 We thank the authors of the original paper for publishing their code and their data collection scripts. We also thank Addgene for the plasmid sequences.
 
 Special thanks to **Dr. Sasitharan Balasubramaniam**, a co-author of the original paper, who taught this course and helped shape the ideas in this project.
-
-## License
-
-No license has been chosen yet. Add one before publishing. The original paper is open access under CC BY 4.0, and the authors' code has its own terms.
